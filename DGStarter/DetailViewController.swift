@@ -9,10 +9,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    // Property
+    var dinosaur: Dinosaur?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let dinosaur = dinosaur {
+            print(dinosaur.name)
+        }
     }
     
 
