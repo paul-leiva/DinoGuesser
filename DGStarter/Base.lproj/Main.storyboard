@@ -41,12 +41,16 @@
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="g4c-9g-BW3" firstAttribute="leading" secondItem="ewz-BG-f3t" secondAttribute="leading" constant="16" id="755-ai-osT"/>
                                                     <constraint firstItem="g4c-9g-BW3" firstAttribute="top" secondItem="ewz-BG-f3t" secondAttribute="top" constant="16" id="NTh-qC-wA2"/>
                                                     <constraint firstAttribute="trailing" secondItem="g4c-9g-BW3" secondAttribute="trailing" constant="16" id="Wqc-jK-PoY"/>
                                                     <constraint firstAttribute="bottom" secondItem="g4c-9g-BW3" secondAttribute="bottom" constant="16" id="cpu-fb-viZ"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="gcr-u5-sRH" appends="YES" id="eg7-wk-lBb"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akq-qz-PZp" userLabel="Third View">
                                                 <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="337"/>
@@ -67,12 +71,16 @@
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailingMargin" secondItem="fyh-MY-Aim" secondAttribute="trailing" constant="16" id="4oM-RD-KCr"/>
                                                     <constraint firstAttribute="bottomMargin" secondItem="fyh-MY-Aim" secondAttribute="bottom" constant="16" id="5vM-Er-Rgv"/>
                                                     <constraint firstItem="fyh-MY-Aim" firstAttribute="top" secondItem="akq-qz-PZp" secondAttribute="topMargin" constant="16" id="6ba-oU-oJV"/>
                                                     <constraint firstItem="fyh-MY-Aim" firstAttribute="leading" secondItem="akq-qz-PZp" secondAttribute="leadingMargin" constant="16" id="N0v-oi-pqS"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hrW-Gf-ZZc" appends="YES" id="Umt-TG-ktF"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -98,12 +106,16 @@
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="79K-5c-xFj" secondAttribute="bottom" constant="16" id="8rl-UQ-LeF"/>
                                                     <constraint firstItem="79K-5c-xFj" firstAttribute="leading" secondItem="tlR-Aa-cEP" secondAttribute="leading" constant="16" id="JMU-Jh-utn"/>
                                                     <constraint firstAttribute="trailing" secondItem="79K-5c-xFj" secondAttribute="trailing" constant="16" id="Zqj-nS-Ucs"/>
                                                     <constraint firstItem="79K-5c-xFj" firstAttribute="top" secondItem="tlR-Aa-cEP" secondAttribute="top" constant="16" id="fv8-7J-iNo"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="v0p-OX-0N4" appends="YES" id="Al4-dv-Gcn"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyz-2Z-c2c" userLabel="Fourth View">
                                                 <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="336"/>
@@ -124,12 +136,16 @@
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Pou-QK-P8x" secondAttribute="bottom" constant="16" id="ODT-vM-jB0"/>
                                                     <constraint firstItem="Pou-QK-P8x" firstAttribute="top" secondItem="Oyz-2Z-c2c" secondAttribute="top" constant="16" id="TWd-fy-hmO"/>
                                                     <constraint firstAttribute="trailing" secondItem="Pou-QK-P8x" secondAttribute="trailing" constant="16" id="Zmz-Mz-4sg"/>
                                                     <constraint firstItem="Pou-QK-P8x" firstAttribute="leading" secondItem="Oyz-2Z-c2c" secondAttribute="leading" constant="16" id="byc-Dh-2So"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="VkU-z9-JtI" appends="YES" id="8Vr-Lg-PHz"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -146,10 +162,49 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dino Guesser!" id="XSr-fG-RTW"/>
+                    <connections>
+                        <segue destination="r1d-RL-y3P" kind="show" identifier="detailSegue" id="1on-7A-p14"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gcr-u5-sRH">
+                    <connections>
+                        <action selector="didTapDinosaur:" destination="BYZ-38-t0r" id="rLd-1Z-mck"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="v0p-OX-0N4">
+                    <connections>
+                        <action selector="didTapDinosaur:" destination="BYZ-38-t0r" id="KKB-bb-6Fn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hrW-Gf-ZZc">
+                    <connections>
+                        <action selector="didTapDinosaur:" destination="BYZ-38-t0r" id="Qyq-mT-0e0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VkU-z9-JtI">
+                    <connections>
+                        <action selector="didTapDinosaur:" destination="BYZ-38-t0r" id="Vkq-pq-heC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="NoG-cZ-gYK">
+            <objects>
+                <viewController id="r1d-RL-y3P" customClass="DetailViewController" customModule="DGStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O7p-IQ-5uV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xap-Dq-cti"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lUa-og-cVd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ac-m6-j6l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ls9-1m-0Y1">

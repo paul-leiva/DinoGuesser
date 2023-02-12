@@ -32,6 +32,11 @@ class GuesserViewController: UIViewController {
         }
     }
 
-
+    @IBAction func didTapDinosaur(_ sender: UITapGestureRecognizer) {
+        if let tappedView = sender.view {
+            performSegue(withIdentifier: "detailSegue", sender: tappedView)
+        }
+    }
+    
 }
 
